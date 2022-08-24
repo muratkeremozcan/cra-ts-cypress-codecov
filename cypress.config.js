@@ -1,6 +1,6 @@
 import '@cypress/instrument-cra'
 const {defineConfig} = require('cypress')
-const codeCoverageTask = require('@cypress/code-coverage/task')
+const codeCoverageTask = require('@bahmutov/cypress-code-coverage/plugin')
 
 module.exports = defineConfig({
   retries: {

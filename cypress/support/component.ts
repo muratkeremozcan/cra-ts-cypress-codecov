@@ -1,5 +1,5 @@
 import './commands'
-import '@cypress/code-coverage/support'
+import '@bahmutov/cypress-code-coverage/support'
 
 import {mount} from 'cypress/react18'
 
