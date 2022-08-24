@@ -5,7 +5,6 @@ import Stepper from './Stepper'
 describe('Stepper.cy.js', () => {
   const stepperSelector = '[data-testid=stepper]'
   const incrementSelector = '[aria-label=increment]'
-  const decrementSelector = '[aria-label=decrement]'
 
   it('playground', () => {
     cy.mount(<Stepper />)
