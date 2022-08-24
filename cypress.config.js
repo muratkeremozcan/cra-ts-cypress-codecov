@@ -1,4 +1,6 @@
+import '@cypress/instrument-cra'
 const {defineConfig} = require('cypress')
+const codeCoverageTask = require('@cypress/code-coverage/task')
 
 module.exports = defineConfig({
   retries: {
@@ -9,12 +11,16 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     baseUrl: 'http://localhost:3000',
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      // and load any plugins that require the Node environment
+      codeCoverageTask(on, config)
+      return config
     },
   },
 
   component: {
+    setupNodeEvents(on, config) {
+      codeCoverageTask(on, config)
+      return config
+    },
     specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
     devServer: {
       framework: 'create-react-app',

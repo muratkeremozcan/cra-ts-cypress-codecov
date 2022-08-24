@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "jest --watchAll=false --coverage",
@@ -27,6 +27,8 @@
     "web-vitals": "2.1.4"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/instrument-cra": "^1.4.0",
     "@testing-library/cypress": "8.0.3",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.3.0",
